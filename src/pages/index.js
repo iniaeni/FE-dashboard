@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
 export default function Home() {
-    return (
-      <div>
-        <h1>Welcome to My Next.js App!</h1>
-      </div>
-    );
-  }
-  
+  const router = useRouter();
+
+  useEffect(() => {
+
+    router.replace('/login');
+  }, []);
+
+  return null;
+}
